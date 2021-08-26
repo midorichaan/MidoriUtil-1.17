@@ -1,0 +1,78 @@
+name: MidoriUtil
+version: 1.3
+description: Minecraft Server Plugin MidoriUtil for 1.17+
+load: POSTWORLD
+author: Midorichan
+website: https://twitter.com/Midorichaan2525
+main: midorichan.Main
+api-version: 1.17
+
+commands:
+  hat:
+    description: アイテムを頭にかぶります。
+    usage: /hat
+  fly:
+    description: お空を自由に飛びます。
+    usage: /fly [player]
+  whois:
+    description: プレイヤーの情報を表示します。
+    usage: /whois <player>
+  reloadconfig:
+    description: コンフィグを再読み込みします。
+    usage: /reloadconfig
+  getpos:
+    description: プレイヤーの座標を取得します。
+    usage: /getpos <player>
+
+permissions:
+  midoriutil.*:
+    description: All permissions for this plugin
+    default: op
+    children:
+      midoriutil.commands.*: true
+      midoriutil.admin.*: true
+  midoriutil.commands.*:
+    description: All permissions for commands
+    default: op
+    children:
+      midoriutil.commands.fly.*: true
+      midoriutil.commands.hat: true
+      midoriutil.commands.whois: true
+      midoriutil.commands.getpos: true
+      midoriutil.commands.reloadconfig: true
+  midoriutil.admin.*:
+    description: All permissions for admin
+    default: op
+    children:
+      midoriutil.admin.op: true
+      midoriutil.admin.cmdlog: true
+  midoriutil.commands.fly.*:
+    description: fly command permission
+    default: op
+    children:
+      midoriutil.commands.fly: true
+      midoriutil.commands.fly.other: true
+  midoriutil.commands.fly:
+    description: fly command permission
+    default: op
+  midoriutil.commands.fly.other:
+    description: fly command permission
+    default: op
+  midoriutil.commands.hat:
+    description: hat command permission
+    default: true
+  midoriutil.commands.getpos:
+    description: getpos command permission
+    default: true
+  midoriutil.commands.whois:
+    description: whois command permission
+    default: op
+  midoriutil.commands.reloadconfig:
+    description: reloadconfig command permission
+    default: op
+  midoriutil.admin.op:
+    description: login message permission
+    default: op
+  midoriutil.admin.cmdlog:
+    description: commandlog permission
+    default: op

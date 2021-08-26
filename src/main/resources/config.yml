@@ -1,0 +1,16 @@
+#プレイヤーのコマンドログを有効にするか
+admin-player-commandlog: false
+#コンソールのコマンドログを有効にするか
+admin-console-commandlog: false
+#リモートコンソールのコマンドログを有効にするか
+admin-rcon-commandlog: false
+#コマンドブロックのコマンドログを有効にするか
+admin-cmdblock-commandlog: false
+
+#プレイヤーのログインメッセージをデフォルトにするか
+player-login-message: false
+#プレイヤーのログアウトメッセージをデフォルトにするか
+player-logout-message: false
+
+#ファントムをぶち殺す
+kill-phantom: true
